@@ -1,3 +1,6 @@
+这是一个java的原生项目，下面是java包的一些解释：
+
+
 com.justcode.jdbc这里是JDBC   mysql的基本操作
 com.justcode.ns这里是使用netty的实现TCP和websocket的一个实例
 
