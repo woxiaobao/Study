@@ -1,0 +1,126 @@
+2015-10-10  16:04:45 INFO  com.lv.httpServer.HttpServerInboundHandler 66 messageReceived - ---/
+2015-10-10  16:04:45 INFO  com.lv.httpServer.HttpServerInboundHandler 66 messageReceived - ---/favicon.ico
+2015-10-10  16:06:46 INFO  com.lv.httpServer.HttpServerInboundHandler 66 messageReceived - come here messageReceived uri=/
+2015-10-10  16:06:55 INFO  com.lv.httpServer.HttpServerInboundHandler 66 messageReceived - come here messageReceived uri=/
+2015-10-10  16:07:05 INFO  com.lv.httpServer.HttpServerInboundHandler 66 messageReceived - come here messageReceived uri=/
+2015-10-10  16:19:11 INFO  com.lv.httpServer.HttpServerInboundHandler 65 messageReceived - come here messageReceived uri=/
+2015-10-10  16:29:58 INFO  com.lv.httpServer.HttpServerInboundHandler 67 messageReceived - come here messageReceived uri=/?title=%22woshixiaobao%22&content=%22%E5%B0%8F%E5%B8%85%E5%93%A5%22
+2015-10-10  16:29:58 INFO  com.lv.httpServer.HttpServerInboundHandler 104 messageReceived - HTTPServer received the new message : {"content":"%22%E5%B0%8F%E5%B8%85%E5%93%A5%22","title":"%22woshixiaobao%22"}
+2015-10-10  16:31:13 INFO  com.lv.httpServer.HttpServerInboundHandler 67 messageReceived - come here messageReceived uri=/?title=woshixiaobao&content=57564
+2015-10-10  16:31:13 INFO  com.lv.httpServer.HttpServerInboundHandler 104 messageReceived - HTTPServer received the new message : {"content":"57564","title":"woshixiaobao"}
+2015-10-10  16:35:26 INFO  com.lv.httpServer.HttpServerInboundHandler 67 messageReceived - come here messageReceived uri=/
+2015-10-10  16:37:27 INFO  com.lv.httpServer.HttpServerInboundHandler 67 messageReceived - come here messageReceived uri=/
+2015-10-10  16:37:27 INFO  com.lv.httpServer.HttpServerInboundHandler 147 sendError - =======404 Not Found
+2015-10-10  16:41:06 INFO  com.lv.httpServer.HttpServerInboundHandler 67 messageReceived - come here messageReceived uri=/
+2015-10-10  16:41:06 INFO  com.lv.httpServer.HttpServerInboundHandler 147 sendError - =======401 Unauthorized
+2015-10-10  16:41:07 INFO  com.lv.httpServer.HttpServerInboundHandler 67 messageReceived - come here messageReceived uri=/
+2015-10-10  16:41:07 INFO  com.lv.httpServer.HttpServerInboundHandler 147 sendError - =======401 Unauthorized
+2015-10-10  16:41:07 INFO  com.lv.httpServer.HttpServerInboundHandler 67 messageReceived - come here messageReceived uri=/
+2015-10-10  16:41:07 INFO  com.lv.httpServer.HttpServerInboundHandler 147 sendError - =======401 Unauthorized
+2015-10-10  16:41:07 INFO  com.lv.httpServer.HttpServerInboundHandler 67 messageReceived - come here messageReceived uri=/
+2015-10-10  16:41:07 INFO  com.lv.httpServer.HttpServerInboundHandler 147 sendError - =======401 Unauthorized
+2015-10-13  09:59:41 INFO  com.lv.httpServer.HttpServerInboundHandler 131 sendError - =======405 Method Not Allowed
+2015-10-13  10:00:36 INFO  com.lv.httpServer.HttpServerInboundHandler 131 sendError - =======405 Method Not Allowed
+2015-10-13  11:45:50 INFO  com.lv.httpServer.HttpServerInboundHandler 51 messageReceived - come here messageReceived uri=/?title=123&content=xiaobao
+2015-10-13  11:45:51 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"xiaobao","title":"123"}
+2015-10-26  11:28:28 INFO  com.lv.httpServer.HttpServerInboundHandler 50 messageReceived - come here messageReceived uri=/?tt=ejfeo&hh=787giu
+2015-10-26  11:28:28 INFO  com.lv.httpServer.HttpServerInboundHandler 132 sendError - =======403 Forbidden
+2015-10-26  11:28:28 INFO  com.lv.httpServer.HttpServerInboundHandler 50 messageReceived - come here messageReceived uri=/favicon.ico
+2015-10-26  11:28:28 INFO  com.lv.httpServer.HttpServerInboundHandler 132 sendError - =======403 Forbidden
+2015-10-26  11:28:28 INFO  com.lv.httpServer.HttpServerInboundHandler 89 messageReceived - HTTPServer received the new message : {}
+2015-10-26  11:50:08 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/?tt=ejfeo&hh=787giu
+2015-10-26  11:50:08 INFO  com.lv.httpServer.HttpServerInboundHandler 132 sendError - =======403 Forbidden
+2015-10-26  11:50:08 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {}
+2015-10-26  11:52:16 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/?tt=ejfeo&hh=787giu
+2015-10-26  11:52:16 INFO  com.lv.httpServer.HttpServerInboundHandler 132 sendError - =======403 Forbidden
+2015-10-26  11:52:16 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {}
+2015-10-26  11:53:50 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/?title=ejfeo&content=787giu
+2015-10-26  11:53:50 INFO  com.lv.httpServer.HttpServerInboundHandler 132 sendError - =======403 Forbidden
+2015-10-26  11:53:50 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {}
+2015-10-26  11:54:14 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/?title=ejfeo&content=787giu
+2015-10-26  11:54:14 INFO  com.lv.httpServer.HttpServerInboundHandler 132 sendError - =======403 Forbidden
+2015-10-26  11:54:14 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {}
+2015-10-26  11:54:53 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/?title=ejfeo&content=787giu
+2015-10-26  11:54:53 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  11:59:55 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/?title=ejfeo&content=787giu
+2015-10-26  11:59:55 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  12:00:51 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/?title=ejfeo&content=%E6%88%91%E6%98%AF%E5%B0%8F%E5%AE%9D
+2015-10-26  12:00:51 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"%E6%88%91%E6%98%AF%E5%B0%8F%E5%AE%9D","title":"ejfeo"}
+2015-10-26  12:01:21 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/?title=ejfeo&content=787giu
+2015-10-26  12:01:21 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  13:39:46 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  13:39:46 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  13:40:09 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  13:40:09 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  13:45:09 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  13:45:09 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  13:45:09 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  13:45:09 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  13:45:32 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  13:45:32 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  13:47:08 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  13:47:08 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  13:53:34 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  13:53:35 INFO  com.lv.httpServer.HttpServerInboundHandler 134 sendError - =======500 Internal Server Error
+2015-10-26  13:58:31 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  13:58:31 INFO  com.lv.httpServer.HttpServerInboundHandler 134 sendError - =======500 Internal Server Error
+2015-10-26  14:03:00 INFO  com.lv.httpServer.HttpServerInboundHandler 134 sendError - =======500 Internal Server Error
+2015-10-26  14:03:00 INFO  com.lv.httpServer.HttpServerInboundHandler 134 sendError - =======500 Internal Server Error
+2015-10-26  14:06:15 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  14:06:16 INFO  com.lv.httpServer.HttpServerInboundHandler 87 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  14:12:07 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  14:12:07 INFO  com.lv.httpServer.HttpServerInboundHandler 88 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  14:14:43 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  14:14:43 INFO  com.lv.httpServer.HttpServerInboundHandler 91 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  14:19:13 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  14:19:13 INFO  com.lv.httpServer.HttpServerInboundHandler 93 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  14:21:03 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  14:21:04 INFO  com.lv.httpServer.HttpServerInboundHandler 93 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  14:23:49 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  14:23:49 INFO  com.lv.httpServer.HttpServerInboundHandler 93 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  14:30:59 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  14:30:59 INFO  com.lv.httpServer.HttpServerInboundHandler 93 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  14:30:59 INFO  com.lv.httpServer.HttpServerInboundHandler 49 messageReceived - come here messageReceived uri=/api?title=ejfeo&content=787giu
+2015-10-26  14:30:59 INFO  com.lv.httpServer.HttpServerInboundHandler 93 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  14:37:29 INFO  com.lv.httpServer.HttpServerInboundHandler 138 sendError - =======405 Method Not Allowed
+2015-10-26  14:38:32 INFO  com.lv.httpServer.HttpServerInboundHandler 137 sendError - =======405 Method Not Allowed
+2015-10-26  14:59:26 INFO  com.lv.httpServer.HttpServerInboundHandler 103 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  15:01:27 INFO  com.lv.httpServer.HttpServerInboundHandler 103 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  15:18:26 INFO  com.lv.httpServer.HttpServerInboundHandler 101 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  15:20:22 INFO  com.lv.httpServer.HttpServerInboundHandler 101 messageReceived - HTTPServer received the new message : {"content":"787giu","title":"ejfeo"}
+2015-10-26  17:25:40 INFO  com.lv.httpServer.HttpServerInboundHandler 152 sendError - =======500 Internal Server Error
+2015-10-27  10:05:19 INFO  com.lv.redis.RedisTest 151 testRedisPool - 中文测试
+2015-10-27  11:00:53 INFO  com.lv.httpServer.HttpServerInboundHandler 152 sendError - =======500 Internal Server Error
+2015-10-27  13:31:08 INFO  com.lv.httpServer.HttpServerInboundHandler 169 sendError - =======500 Internal Server Error
+2015-11-02  13:48:40 INFO  com.lv.redis.RedisTest 151 testRedisPool - 中文测试
+2015-11-02  15:08:55 INFO  com.lv.httpServer.HttpServerInboundHandler 107 messageReceived - userId=www
+2015-11-02  15:08:55 INFO  com.lv.httpServer.HttpServerInboundHandler 113 messageReceived - name:userId,value:www
+2015-11-02  15:23:00 INFO  com.lv.httpServer.LoginServer 27 index - userId=www
+2015-11-02  15:23:00 INFO  com.lv.httpServer.LoginServer 33 index - name:userId,value:www
+2015-11-02  15:24:25 INFO  com.lv.httpServer.LoginServer 27 index - userId=123
+2015-11-02  15:24:25 INFO  com.lv.httpServer.LoginServer 33 index - name:userId,value:123
+2015-11-02  15:24:25 INFO  com.lv.httpServer.LoginServer 27 index - username=xiaobao
+2015-11-02  15:24:25 INFO  com.lv.httpServer.LoginServer 33 index - name:username,value:xiaobao
+2015-11-02  15:24:25 INFO  com.lv.httpServer.LoginServer 27 index - password=123456
+2015-11-02  15:24:25 INFO  com.lv.httpServer.LoginServer 33 index - name:password,value:123456
+2015-11-02  15:29:14 INFO  com.lv.httpServer.LoginServer 33 index - name:userId,value:123
+2015-11-02  15:29:14 INFO  com.lv.httpServer.LoginServer 33 index - name:username,value:xiaobao
+2015-11-02  15:29:14 INFO  com.lv.httpServer.LoginServer 33 index - name:password,value:123456
+2015-11-02  15:54:21 INFO  com.lv.httpServer.LoginServer 41 index - name:username,value:xiaobao
+2015-11-02  15:54:21 INFO  com.lv.httpServer.LoginServer 41 index - name:password,value:123456
+2015-11-02  15:56:24 INFO  com.lv.httpServer.LoginServer 41 index - null,null
+2015-11-02  15:56:24 INFO  com.lv.httpServer.LoginServer 41 index - null,null
+2015-11-02  16:04:05 INFO  com.lv.httpServer.LoginServer 41 index - username,xiaobao
+2015-11-02  16:04:05 INFO  com.lv.httpServer.LoginServer 41 index - password,123456
+2015-11-02  16:04:06 INFO  com.lv.httpServer.LoginServer 41 index - username,xiaobao
+2015-11-02  16:04:06 INFO  com.lv.httpServer.LoginServer 41 index - password,123456
+2015-11-02  16:04:23 INFO  com.lv.httpServer.LoginServer 41 index - username,xiaobao
+2015-11-02  16:04:23 INFO  com.lv.httpServer.LoginServer 41 index - password,123456
+2015-11-02  16:11:14 INFO  com.lv.httpServer.LoginServer 48 index - xiaobao,123456
+2015-11-02  16:12:49 INFO  com.lv.httpServer.LoginServer 48 index - xiaobao,123456
+2015-11-02  16:14:12 INFO  com.lv.httpServer.LoginServer 48 index - xiaobao,123456
+2015-11-02  16:37:18 INFO  com.lv.httpServer.LoginServer 48 index - xiaobao,123456
+2015-11-02  16:55:46 INFO  com.lv.httpServer.HttpServerInboundHandler 191 sendError - =======403 Forbidden
+2015-11-02  16:55:46 INFO  com.lv.httpServer.HttpServerInboundHandler 191 sendError - =======403 Forbidden
+2015-11-02  17:10:51 INFO  com.lv.httpServer.LoginServer 48 index - xiaobao,123456
+2015-11-02  17:26:34 INFO  com.lv.httpServer.LoginServer 44 index - xiaobao,123456

@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: com.lv.spider.Test
+Class-Path: lib/commons-pool-1.6.jar lib/fastjson-1.2.2.jar lib/jedis-2.1.0.jar lib/jsoup-1.7.2.jar lib/log4j-api-2.3.jar lib/log4j-core-2.3.jar lib/netty-all-5.0.0.Alpha2.jar lib/mysql-connector-java-5.0.7-bin.jar

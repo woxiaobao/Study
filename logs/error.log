@@ -1,0 +1,4 @@
+2015-09-24  10:41:10 ERROR com.lv.log4j.MyApplication 11 doIt - Did it again!
+2015-09-24  10:41:10 ERROR com.lv.log4j.LogTest 15 main - Hello, World!
+2015-09-24  10:41:10 ERROR com.lv.log4j.LogTest 16 main - Did it again!
+2015-09-24  10:41:10 FATAL com.lv.log4j.LogTest 20 main - 我是fatal信息
