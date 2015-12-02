@@ -21,7 +21,6 @@ public class Test {
 //			t.getDatasByClass(url);
 //			Thread.sleep(5000);
 //		}
-		 
 		//t.getDatasByCssQuery();
 	}
 
