@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.jsoup.Connection;
+import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -21,7 +22,6 @@ public class ExtractService {
 		validateRule(rule);
 
 		List<LinkTypeData> datas = new ArrayList<LinkTypeData>();
-		LinkTypeData data = null;
 		try {
 			/**
 			 * 解析rule
@@ -43,6 +43,7 @@ public class ExtractService {
 
 			// 设置请求类型
 			Document doc = null;
+			Response resp=null;
 			switch (requestType) {
 			case Rule.GET:
 				doc = conn.timeout(100000).get();
@@ -50,48 +51,43 @@ public class ExtractService {
 			case Rule.POST:
 				doc = conn.timeout(100000).post();
 				break;
+			case Rule.ASYNC:
+				resp=conn.timeout(100000).ignoreContentType(true).execute();
+				break;
 			}
 			
 			// 处理返回数据
 			Elements results = new Elements();
 			switch (type) {
-			case Rule.CLASS:
-				results = doc.getElementsByClass(resultTagName);
-				break;
-			case Rule.ID:
-				Element result = doc.getElementById(resultTagName);
-				results.add(result);
-				break;
-			case Rule.SELECTION:
-				results = doc.select(resultTagName);
-				break;
-			default:
-				// 当resultTagName为空时默认去body标签
-				if (resultTagName.equals("")) {
-					results = doc.getElementsByTag("body");
-				}
+				case Rule.CLASS:
+					results = doc.getElementsByClass(resultTagName);
+					break;
+				case Rule.ID:
+					Element result = doc.getElementById(resultTagName);
+					results.add(result);
+					break;
+				case Rule.SELECTION:
+					results = doc.select(resultTagName);
+					break;
+				case Rule.JSON:
+					System.out.println(resp.body());
+					break;
+//				default:
+//					// 当resultTagName为空时默认去body标签
+//					if (resultTagName.equals("")) {
+//						results = doc.getElementsByTag("body");
+//					}
 			}
 			
-			System.out.println(results);
-			
-			for (Element result : results) {
-				Elements links = result.getElementsByTag("a");
-				for (Element link : links) {
-					// 必要的筛选
-					String linkHref = link.attr("href");
-					String linkText = link.text();
-
-					if (!linkHref.startsWith("http://")) {
-						continue;
-					}
-					data = new LinkTypeData();
-					data.setLinkHref(linkHref);
-					data.setLinkText(linkText);
-
-					datas.add(data);
-
-				}
+			if(type==Rule.JSON){
+				//System.out.println(resp.body());
+				ParserJSON.getDATA(resp.body());
+			}else{
+				//解析html 存放在datas中
+				datas=ParserHTML.getDATA(results);
 			}
+			
+			
 
 		} catch (IOException e) {
 			e.printStackTrace();

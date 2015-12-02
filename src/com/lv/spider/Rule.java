@@ -22,7 +22,7 @@ public class Rule {
 	private String[] values;
 
 	/**
-	 * 对返回的HTML，第一次过滤所用的标签，请先设置type
+	 * 对返回的HTML(或数据)，第一次过滤所用的标签，请先设置type
 	 */
 	private String resultTagName;
 
@@ -38,10 +38,12 @@ public class Rule {
 
 	public final static int GET = 0;
 	public final static int POST = 1;
+	public final static int ASYNC = 2;//请求方式是异步
 
 	public final static int CLASS = 0;
 	public final static int ID = 1;
 	public final static int SELECTION = 2;
+	public final static int JSON = 3;
 
 	public Rule() {
 	}

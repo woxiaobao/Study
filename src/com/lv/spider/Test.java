@@ -14,16 +14,28 @@ public class Test {
 	private static Logger logger = LogManager.getLogger(Test.class);
 	public static void main(String[] arge) throws Exception {
 		Test t = new Test();
-		//String url="http://news.baidu.com/";
-		String url="http://www.lagou.com/jobs/list_?city=%E5%8C%97%E4%BA%AC&gj=&xl=&jd=&hy=&px=&cl=false&fromSearch=true&labelWords=&suginput=";
+		String url="http://www.lagou.com/jobs/positionAjax.json?city=北京";
+		t.getDatas(url);
+//		String url="http://www.lagou.com/jobs/list_?city=%E5%8C%97%E4%BA%AC&gj=&xl=&jd=&hy=&px=&cl=false&fromSearch=true&labelWords=&suginput=";
 //		while(true){
-			t.getDatasByClass(url);
+//			t.getDatasByClass(url);
 //			Thread.sleep(5000);
 //		}
 		 
 		//t.getDatasByCssQuery();
 	}
 
+	//获取拉勾网的数据
+	public void getDatas(String url) throws Exception{
+		//http://www1.sxcredit.gov.cn/public/infocomquery.do?method=publicIndexQuery
+		int i=1;
+		String pn=i+"";
+		Rule rule = new Rule(url,new String[] { "first","pn","kd" }, new String[] {  "false",pn,"后台开发" },
+				"", Rule.JSON, Rule.ASYNC);
+		List<LinkTypeData> extracts = ExtractService.extract(rule);
+		//printf(extracts);
+	}
+	
 	public void getDatasByClass(String url) throws Exception {
 		//http://www1.sxcredit.gov.cn/public/infocomquery.do?method=publicIndexQuery
 		Rule rule = new Rule(
