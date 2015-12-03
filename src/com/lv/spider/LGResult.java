@@ -21,6 +21,13 @@ public class LGResult {
 	//薪资
 	private String salary;
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		String str=companyName+" "+industryField+" "+financeStage+" "+positionName+" "+positionType+" "+workYear+" "+education+" "+salary+" "+createTime;
+		return str;
+	}
+	
 	public String getCreateTime() {
 		return createTime;
 	}

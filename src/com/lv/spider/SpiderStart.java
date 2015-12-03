@@ -10,11 +10,15 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.lv.log.TimeCache;
+
 public class SpiderStart {
 	private static Logger logger = LogManager.getLogger(SpiderStart.class);
+	private static boolean loop = true;
 	public static void main(String[] arge) throws Exception {
 		SpiderStart t = new SpiderStart();
-		String url="http://www.lagou.com/jobs/positionAjax.json?city=北京";
+		String url="http://www.lagou.com/jobs/positionAjax.json?city=长沙";
+		TimeCache.start();
 		t.getDatas(url);
 //		String url="http://www.lagou.com/jobs/list_?city=%E5%8C%97%E4%BA%AC&gj=&xl=&jd=&hy=&px=&cl=false&fromSearch=true&labelWords=&suginput=";
 //		while(true){
@@ -23,15 +27,24 @@ public class SpiderStart {
 //		}
 		//t.getDatasByCssQuery();
 	}
+	
+	public static void quit() {
+		loop = false;
+	}
 
 	//获取拉勾网的数据
 	public void getDatas(String url) throws Exception{
 		//http://www1.sxcredit.gov.cn/public/infocomquery.do?method=publicIndexQuery
 		int i=1;
-		String pn=i+"";
-		Rule rule = new Rule(url,new String[] { "first","pn","kd" }, new String[] {  "false",pn,"后台开发" },
-				"", Rule.JSON, Rule.ASYNC);
-		List<LinkTypeData> extracts = ExtractService.extract(rule);
+		while(loop){
+			String pn=i+"";
+			Rule rule = new Rule(url,new String[] { "first","pn","kd" }, new String[] {  "false",pn,"后台开发" },
+					"", Rule.JSON, Rule.ASYNC);
+			List<LinkTypeData> extracts = ExtractService.extract(rule);
+			i++;
+			Thread.sleep(5000);
+		}
+		
 		//printf(extracts);
 	}
 	

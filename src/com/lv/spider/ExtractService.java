@@ -70,7 +70,7 @@ public class ExtractService {
 					results = doc.select(resultTagName);
 					break;
 				case Rule.JSON:
-					System.out.println(resp.body());
+//					System.out.println(resp.body());
 					break;
 //				default:
 //					// 当resultTagName为空时默认去body标签
