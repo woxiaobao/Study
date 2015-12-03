@@ -1,5 +1,4 @@
-这是一个java的原生项目，下面是java包的一些解释：
-
+#原生java，下面是包的一些注解：
 
 com.justcode.jdbc这里是JDBC   mysql的基本操作
 
