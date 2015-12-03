@@ -10,10 +10,10 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class Test {
-	private static Logger logger = LogManager.getLogger(Test.class);
+public class SpiderStart {
+	private static Logger logger = LogManager.getLogger(SpiderStart.class);
 	public static void main(String[] arge) throws Exception {
-		Test t = new Test();
+		SpiderStart t = new SpiderStart();
 		String url="http://www.lagou.com/jobs/positionAjax.json?city=北京";
 		t.getDatas(url);
 //		String url="http://www.lagou.com/jobs/list_?city=%E5%8C%97%E4%BA%AC&gj=&xl=&jd=&hy=&px=&cl=false&fromSearch=true&labelWords=&suginput=";
