@@ -45,6 +45,7 @@ public class ParserJSON {
 								String resultkey = resultIterator.next();
 								String value = v.get(resultkey).toString();
 								System.out.println(resultkey+"="+value);
+								
 							}
 						}
 					}
