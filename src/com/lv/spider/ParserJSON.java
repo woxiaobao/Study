@@ -82,7 +82,6 @@ public class ParserJSON {
 									re.setCompanyName(value);
 								}
 							}
-//							System.out.println(re.toString());
 							LogStart.WLog(re.toString());
 							
 						}
