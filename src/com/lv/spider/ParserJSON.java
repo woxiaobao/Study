@@ -21,6 +21,7 @@ public class ParserJSON {
 				Map<String, Object> content = JSON.parseObject(content_value, new TypeReference<Map<String, Object>>() {});
 				Iterator<String> contentIterator = content.keySet().iterator();
 				
+				
 				while(contentIterator.hasNext()){
 					String contentkey = contentIterator.next();
 					if(contentkey=="result"){
