@@ -4,6 +4,7 @@ public class LGResult {
 	
 	//发布时间
 	private String createTime;
+	
 	//部门
 	private String positionName;
 	//职位
