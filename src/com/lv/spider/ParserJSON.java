@@ -18,6 +18,8 @@ public class ParserJSON {
 	//map以最快的方式解析
 	public static Map<String,Object> getDATAP(String results){
 		Map<String, Object> data = JSON.parseObject(results, new TypeReference<Map<String, Object>>() {});
+		
+		
 		//效率最高的map遍历
 		for(Iterator<Entry<String, Object>> it=data.entrySet().iterator();it.hasNext();){
 			it.next();
