@@ -8,7 +8,7 @@ import java.net.UnknownHostException;
 public class ClientD {
 
 	/**
-	 * @param args4444
+	 * @param args44445555
 	 * @throws IOException 
 	 * @throws UnknownHostException 
 	 */
@@ -36,6 +36,7 @@ public class ClientD {
 		
 		//使用输出流将指定的数据写出去。
 		out.write("tcp演示：哥们又来了!".getBytes());
+		
 		
 		//关闭资源。
 		socket.close();
