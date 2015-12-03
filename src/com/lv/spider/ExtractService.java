@@ -81,7 +81,7 @@ public class ExtractService {
 			
 			if(type==Rule.JSON){
 				//System.out.println(resp.body());
-				ParserJSON.getDATA(resp.body());
+				ParserJSON.getDATAP(resp.body());
 			}else{
 				//解析html 存放在datas中
 				datas=ParserHTML.getDATA(results);

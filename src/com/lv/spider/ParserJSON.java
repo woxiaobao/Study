@@ -21,14 +21,14 @@ public class ParserJSON {
 		
 		//效率最高的map遍历
 		for(Iterator<Entry<String, Object>> it=data.entrySet().iterator();it.hasNext();){
-			it.next();
+			//it.next();
 			Entry<String, Object> e = it.next(); 
 			String key = e.getKey().toString();
 			
 			if(key=="content"){
 				Map<String, Object> content = JSON.parseObject(e.getValue().toString(), new TypeReference<Map<String, Object>>() {});
-				for(Iterator<Entry<String, Object>> ite=content.entrySet().iterator();it.hasNext();){
-					ite.next();
+				for(Iterator<Entry<String, Object>> ite=content.entrySet().iterator();ite.hasNext();){
+					//ite.next();
 					Entry<String, Object> ec = ite.next(); 
 					String keye = ec.getKey().toString();
 					
