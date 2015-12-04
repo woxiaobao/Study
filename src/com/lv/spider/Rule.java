@@ -44,6 +44,7 @@ public class Rule {
 	public final static int ID = 1;
 	public final static int SELECTION = 2;
 	public final static int JSON = 3;
+	public final static int IMAGE = 4;
 
 	public Rule() {
 	}

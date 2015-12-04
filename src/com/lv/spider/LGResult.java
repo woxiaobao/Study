@@ -8,6 +8,7 @@ import java.util.Map;
 import com.lv.log.LogStart;
 
 public class LGResult {
+	
 	private static String[] Fileds = {
 		"createTime",
 		"positionName",
@@ -23,45 +24,6 @@ public class LGResult {
 	public LGResult(){
 		
 	}
-	
-	public static void result(Map<String,Object> map) throws NoSuchMethodException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
-		@SuppressWarnings("unchecked")
-		Class<LGResult> model = (Class<LGResult>) Class.forName("com.lv.spider.LGResult");
-		LGResult bean = model.newInstance();
-		for(String key : Fileds){
-			String str = map.get(key).toString();
-			key = key.substring(0, 1).toUpperCase() + key.substring(1); // 将属性的首字符大写，方便构造get，set
-			Method method = model.getMethod("set"+key,String.class);
-			if(null != str){  
-                method.invoke(bean, str);
-            }
-		}
-		LogStart.WLog(bean.toString());
-	}
-	
-	public LGResult(Map<String,Object> map) throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InstantiationException{
-		LGResult bean=new LGResult();
-		for(String key : Fileds){
-			String str = map.get(key).toString();
-			
-			Class<?> cls = bean.getClass();
-			Method methods[] = cls.getDeclaredMethods();  
-//	        Field fields[] = cls.getDeclaredFields(); 
-			
-			String setMethod = pareSetName(key);  
-            if(!checkMethod(methods, setMethod)){  
-                continue;  
-            }  
-            Method method = cls.getMethod(setMethod, String.class);  
-            if(null != str){  
-//            	method.setAccessible(true);//如果方法是private可以通过设置这个参数来调用
-                method.invoke(bean, str);
-            }
-			
-		}
-		LogStart.WLog(bean.toString());
-	}
-
 	// 发布时间
 	private String createTime;
 
@@ -88,6 +50,47 @@ public class LGResult {
 
 	// 薪资
 	private String salary;
+	
+	//通过反射技术获取到LGResult的字段进行遍历
+	public static void result(Map<String,Object> map) throws NoSuchMethodException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
+		@SuppressWarnings("unchecked")
+		Class<LGResult> model = (Class<LGResult>) Class.forName("com.lv.spider.LGResult");
+		LGResult bean = model.newInstance();
+		Field fields[] = model.getDeclaredFields();
+		
+		for(Field key : fields){
+			if(key.getName().equals("Fileds")) continue;
+			String str = map.get(key.getName()).toString();
+			
+			Method method = model.getMethod(pareSetName(key.getName()),String.class);
+			if(null != str) method.invoke(bean, str);
+		}
+		LogStart.WLog(bean.toString());
+	}
+	
+	//反射技术通过上面定义一个字段进行遍历
+	public LGResult(Map<String,Object> map) throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InstantiationException{
+		LGResult bean=new LGResult();
+		Class<?> cls = bean.getClass();
+		Method methods[] = cls.getDeclaredMethods();
+		
+		for(String key : Fileds){
+			String str = map.get(key).toString();
+			
+			String setMethod = pareSetName(key);  
+            if(!checkMethod(methods, setMethod)){  
+                continue;  
+            }  
+            Method method = cls.getMethod(setMethod, String.class);  
+            if(null != str){  
+//            	method.setAccessible(true);//如果方法是private可以通过设置这个参数来调用
+                method.invoke(bean, str);
+            }
+		}
+		LogStart.WLog(bean.toString());
+	}
+
+	
 
 	/**  
      * 拼接某属性get 方法  

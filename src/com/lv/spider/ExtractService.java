@@ -77,6 +77,9 @@ public class ExtractService {
 				case Rule.SELECTION:
 					results = doc.select(resultTagName);
 					break;
+				case Rule.IMAGE:
+					results = doc.select(resultTagName);
+					break;
 				case Rule.JSON:
 //					System.out.println(resp.body());
 					break;
@@ -86,10 +89,12 @@ public class ExtractService {
 //						results = doc.getElementsByTag("body");
 //					}
 			}
-			
+//			System.out.println(results);
 			if(type==Rule.JSON){
 				//System.out.println(resp.body());
 				ParserJSON.getDATAP(resp.body());
+			}else if(type==Rule.IMAGE){
+				ParserHTML.getIMAGES(results);
 			}else{
 				//解析html 存放在datas中
 				datas=ParserHTML.getDATA(results);

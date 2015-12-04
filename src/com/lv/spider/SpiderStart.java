@@ -13,13 +13,22 @@ import org.jsoup.select.Elements;
 import com.lv.log.TimeCache;
 
 public class SpiderStart {
+	
 	private static Logger logger = LogManager.getLogger(SpiderStart.class);
 	private static boolean loop = true;
+	
 	public static void main(String[] arge) throws Exception {
 		SpiderStart t = new SpiderStart();
+		//拉勾网
 		String url="http://www.lagou.com/jobs/positionAjax.json?city=长沙";
-		TimeCache.start();
-		t.getDatas(url);
+		//百度图片
+		String baiduRUL="http://www.wmpic.me/tupian/yijing/";
+		//时间定时任务
+//		TimeCache.start();
+		//百度图片下载
+		t.getImages(baiduRUL);
+		//获取拉勾网的数据
+//		t.getDatas(url);
 //		String url="http://www.lagou.com/jobs/list_?city=%E5%8C%97%E4%BA%AC&gj=&xl=&jd=&hy=&px=&cl=false&fromSearch=true&labelWords=&suginput=";
 //		while(true){
 //			t.getDatasByClass(url);
@@ -44,6 +53,17 @@ public class SpiderStart {
 			i++;
 			Thread.sleep(5000);
 		}
+		
+		//printf(extracts);
+	}
+	
+	//获取百度图片的url然后下载图片
+	public void getImages(String url) throws Exception{
+		//http://www1.sxcredit.gov.cn/public/infocomquery.do?method=publicIndexQuery
+		Rule rule = new Rule(url,new String[] { "a" }, new String[] {  "1" },
+				"body", Rule.IMAGE, Rule.GET);
+		List<LinkTypeData> extracts = ExtractService.extract(rule);
+		Thread.sleep(5000);
 		
 		//printf(extracts);
 	}
