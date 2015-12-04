@@ -59,12 +59,14 @@ public class Rule {
 		this.requestMoethod = requestMoethod;
 	}
 
+	
 	public String getUrl() {
 		return url;
 	}
 
 	public void setUrl(String url) {
 		this.url = url;
+		System.out.println(url);
 	}
 
 	public String[] getParams() {
@@ -106,5 +108,6 @@ public class Rule {
 	public void setRequestMoethod(int requestMoethod) {
 		this.requestMoethod = requestMoethod;
 	}
+	
 
 }

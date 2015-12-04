@@ -1,5 +1,6 @@
 package com.lv.spider;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ public class ParserJSON {
 	private static Logger LOG = LogManager.getLogger(ParserJSON.class);
 	
 	//map以最快的方式解析
-	public static Map<String,Object> getDATAP(String results){
+	public static Map<String,Object> getDATAP(String results) throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InstantiationException{
 		Map<String, Object> data = JSON.parseObject(results, new TypeReference<Map<String, Object>>() {});
 		
 		//效率最高的map遍历
@@ -41,50 +42,7 @@ public class ParserJSON {
 						}
 						for(Map<String, Object> v : result_value){
 							System.out.println("v="+v);
-							LGResult re=new LGResult();
-							Iterator<String> resultIterator = v.keySet().iterator();
-							while(resultIterator.hasNext()){
-								
-								String resultkey = resultIterator.next();
-								if(resultkey=="salary"){
-									String value = v.get(resultkey).toString();
-									re.setSalary(value);
-								}
-								if(resultkey=="education"){
-									String value = v.get(resultkey).toString();
-									re.setEducation(value);
-								}
-								if(resultkey=="createTime"){
-									String value = v.get(resultkey).toString();
-									re.setCreateTime(value);
-								}
-								if(resultkey=="workYear"){
-									String value = v.get(resultkey).toString();
-									re.setWorkYear(value);
-								}
-								if(resultkey=="positionType"){
-									String value = v.get(resultkey).toString();
-									re.setPositionType(value);
-								}
-								if(resultkey=="positionName"){
-									String value = v.get(resultkey).toString();
-									re.setPositionName(value);
-								}
-								if(resultkey=="financeStage"){
-									String value = v.get(resultkey).toString();
-									re.setFinanceStage(value);
-								}
-								if(resultkey=="industryField"){
-									String value = v.get(resultkey).toString();
-									re.setIndustryField(value);
-								}
-								if(resultkey=="companyName"){
-									String value = v.get(resultkey).toString();
-									re.setCompanyName(value);
-								}
-							}
-							LogStart.WLog(re.toString());
-							
+							LGResult.result(v);
 						}
 					}
 				}
@@ -95,7 +53,7 @@ public class ParserJSON {
 	
 	
 	//解析map
-	public static Map<String,Object> getDATA(String results){
+	public static Map<String,Object> getDATA(String results) throws NoSuchMethodException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
 		Map<String, Object> data = JSON.parseObject(results, new TypeReference<Map<String, Object>>() {});
 		Iterator<String> iterator = data.keySet().iterator();
 		while(iterator.hasNext()){
@@ -118,52 +76,8 @@ public class ParserJSON {
 							SpiderStart.quit();
 						}
 						for(Map<String, Object> v : result_value){
-//							System.out.println("v="+v);
-							LGResult re=new LGResult();
-							Iterator<String> resultIterator = v.keySet().iterator();
-							while(resultIterator.hasNext()){
-								
-								String resultkey = resultIterator.next();
-								if(resultkey=="salary"){
-									String value = v.get(resultkey).toString();
-									re.setSalary(value);
-								}
-								if(resultkey=="education"){
-									String value = v.get(resultkey).toString();
-									re.setEducation(value);
-								}
-								if(resultkey=="createTime"){
-									String value = v.get(resultkey).toString();
-									re.setCreateTime(value);
-								}
-								if(resultkey=="workYear"){
-									String value = v.get(resultkey).toString();
-									re.setWorkYear(value);
-								}
-								if(resultkey=="positionType"){
-									String value = v.get(resultkey).toString();
-									re.setPositionType(value);
-								}
-								if(resultkey=="positionName"){
-									String value = v.get(resultkey).toString();
-									re.setPositionName(value);
-								}
-								if(resultkey=="financeStage"){
-									String value = v.get(resultkey).toString();
-									re.setFinanceStage(value);
-								}
-								if(resultkey=="industryField"){
-									String value = v.get(resultkey).toString();
-									re.setIndustryField(value);
-								}
-								if(resultkey=="companyName"){
-									String value = v.get(resultkey).toString();
-									re.setCompanyName(value);
-								}
-							}
-//							System.out.println(re.toString());
-							LogStart.WLog(re.toString());
-							
+							System.out.println("v="+v);
+							LGResult.result(v);
 						}
 					}
 				}

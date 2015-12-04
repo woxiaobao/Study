@@ -1,6 +1,7 @@
 package com.lv.spider;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +16,15 @@ public class ExtractService {
 	/**
 	 * @param rule
 	 * @return
+	 * @throws InvocationTargetException 
+	 * @throws IllegalArgumentException 
+	 * @throws IllegalAccessException 
+	 * @throws SecurityException 
+	 * @throws NoSuchMethodException 
+	 * @throws ClassNotFoundException 
+	 * @throws InstantiationException 
 	 */
-	public static List<LinkTypeData> extract(Rule rule) {
+	public static List<LinkTypeData> extract(Rule rule) throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InstantiationException {
 
 		// 进行对rule的必要校验
 		validateRule(rule);

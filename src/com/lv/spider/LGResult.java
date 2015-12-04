@@ -1,27 +1,66 @@
 package com.lv.spider;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
 
+import com.lv.log.LogStart;
+
 public class LGResult {
-	private static String[] Fileds = {"createTime","positionName"};
+	private static String[] Fileds = {
+		"createTime",
+		"positionName",
+		"positionType",
+		"workYear",
+		"education",
+		"companyName",
+		"industryField",
+		"financeStage",
+		"salary"
+		};
 	
-//	public LGResult(Map<String,Object> map) throws ClassNotFoundException{
-//		for(String key : Fileds){
-//			String str = map.get(key).toString();
-//			Class<LGResult> name = (Class<LGResult>) Class.forName("com.lv.spider.LGResult");
-//			Field[] rule = name.getDeclaredFields();
-//			for(int i=0;i<rule.length;i++){
-//				System.out.println(rule[i].getName());
-//				String names=rule[i].getName();
-//				if(str.equals(names)){
-//					rule[i].set
-//				}
-//			}
-//			
-//		}
-//	}
+	public LGResult(){
+		
+	}
+	
+	public static void result(Map<String,Object> map) throws NoSuchMethodException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
+		@SuppressWarnings("unchecked")
+		Class<LGResult> model = (Class<LGResult>) Class.forName("com.lv.spider.LGResult");
+		LGResult bean = model.newInstance();
+		for(String key : Fileds){
+			String str = map.get(key).toString();
+			key = key.substring(0, 1).toUpperCase() + key.substring(1); // 将属性的首字符大写，方便构造get，set
+			Method method = model.getMethod("set"+key,String.class);
+			if(null != str){  
+                method.invoke(bean, str);
+            }
+		}
+		LogStart.WLog(bean.toString());
+	}
+	
+	public LGResult(Map<String,Object> map) throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InstantiationException{
+		LGResult bean=new LGResult();
+		for(String key : Fileds){
+			String str = map.get(key).toString();
+			
+			Class<?> cls = bean.getClass();
+			Method methods[] = cls.getDeclaredMethods();  
+//	        Field fields[] = cls.getDeclaredFields(); 
+			
+			String setMethod = pareSetName(key);  
+            if(!checkMethod(methods, setMethod)){  
+                continue;  
+            }  
+            Method method = cls.getMethod(setMethod, String.class);  
+            if(null != str){  
+//            	method.setAccessible(true);//如果方法是private可以通过设置这个参数来调用
+                method.invoke(bean, str);
+            }
+			
+		}
+		LogStart.WLog(bean.toString());
+	}
 
 	// 发布时间
 	private String createTime;
@@ -50,6 +89,48 @@ public class LGResult {
 	// 薪资
 	private String salary;
 
+	/**  
+     * 拼接某属性get 方法  
+     * @param fldname  
+     * @return  
+     */  
+    public static String pareGetName(String fldname){  
+        if(null == fldname || "".equals(fldname)){  
+            return null;  
+        }  
+        String pro = "get"+fldname.substring(0,1).toUpperCase()+fldname.substring(1);  
+        return pro;  
+    }  
+    /**  
+     * 拼接某属性set 方法  
+     * @param fldname  
+     * @return  
+     */  
+    public static String pareSetName(String fldname){  
+        if(null == fldname || "".equals(fldname)){  
+            return null;  
+        }  
+        String pro = "set"+fldname.substring(0,1).toUpperCase()+fldname.substring(1);  
+        return pro;  
+    }  
+    /**  
+     * 判断该方法是否存在  
+     * @param methods  
+     * @param met  
+     * @return  
+     */  
+    public static boolean checkMethod(Method methods[],String met){  
+        if(null != methods ){  
+            for(Method method:methods){  
+                if(met.equals(method.getName())){  
+                    return true;  
+                }  
+            }  
+        }          
+        return false;  
+    }  
+	
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
