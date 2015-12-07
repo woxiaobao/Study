@@ -26,7 +26,7 @@ com.lv.readlog这里是读取log日志文件
 
 com.lv.redis这个里面是操作内存服务器redis的基本方法
 
-com.lv.spider这里写了一个爬虫的方法，使用了jsonp.jar
+com.lv.spider这里写了一个爬虫的方法，使用了jsonp.jar,其中有个是获取拉勾网的数据。
 
 
 com.lv.staticd中是静态代码块和代码的区辨
