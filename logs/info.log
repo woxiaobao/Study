@@ -3,3 +3,5 @@
 2015-11-27  15:20:25 INFO  com.lv.redis.RedisTest 54 testString - null
 2015-11-27  15:20:25 INFO  com.lv.redis.RedisTest 59 testString - liuling-24-476777389
 2015-12-03  15:01:43 INFO  com.lv.spider.ParserJSON 117 getDATA - 没有数据了！
+2015-12-04  10:27:29 INFO  com.lv.spider.ParserJSON 40 getDATAP - no data！
+2015-12-04  13:58:49 INFO  com.lv.spider.ParserJSON 40 getDATAP - no data！

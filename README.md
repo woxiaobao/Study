@@ -16,6 +16,8 @@ com.lv.fastjson中是fastjson.jar架包中的一些基本的方法，有通过�
 
 com.lv.httpServer这里是使用netty实现httpserver服务的实例
 
+com.lv.images这是java对图片一个获取和压缩的方法
+
 com.lv.log这个是使用java原生的io写入日志的方法，其中使用了动态命名，使用Timer来定时任务。使用生产一串字符串来模拟数据来源。
 
 com.lv.log4j是log4j.jar架包的基本用法，在控制台输出日志，也会在项目的log文件中保存，在启动的时候它会加载log4j2.xml文件，读取其中的配置
@@ -39,3 +41,5 @@ com.lv.tcp.upload
 com.lv.url
 com.lv.url.chat基于socket聊天的例子
 com.lv.date处理时间的工具类
+
+com.lv.zip这个是java对文件进行解压缩处理
