@@ -10,6 +10,12 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
+
+/**
+ * 文件压缩和解压
+ * @author MyPC
+ *
+ */
 public class ZipUtil {
 
 	public static void main(String[] args) {
