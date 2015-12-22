@@ -21,9 +21,9 @@ public class ZipUtil {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String targetPath = "D:\\images";
-        File file = ZipUtil.zip(targetPath);
-        System.out.println(file);
-        //ZipUtil.unzip("D:\\images.zip");
+//        File file = ZipUtil.zip(targetPath);
+//        System.out.println(file);
+        ZipUtil.unzip("D:\\images.zip");
 	}
 	
 	/**
