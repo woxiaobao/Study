@@ -223,5 +223,9 @@ public class DateUtil {
 
 		return weeks[num];
 	}
+	
+	public static void main(String[] arge){
+		System.out.println(getWeek(7));
+	}
 
 }
