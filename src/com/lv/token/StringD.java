@@ -4,7 +4,8 @@ public class StringD {
 	public static void main(String args[]) {
         //String str = new String("amigoxiexiexingxing");
         //System.out.println("原始：" + str);
-		StringD.stringTest();
+		StringD.sjint();
+		StringD.sjdouble();
     }
 	
 	public static void stringTest(){
@@ -34,5 +35,25 @@ public class StringD {
 		System.out.println("返回字符串的副本，忽略前导空白和尾部空白="+trimstr);
 		
 	}
-
+	
+	
+	public static void sjint(){
+		long old=System.currentTimeMillis();
+		int n=12327;
+		for(int i=0;i<1000000;i++){
+			n=n*80/100;
+		}
+		long now=System.currentTimeMillis();
+		System.out.println(now-old);
+	}
+	
+	public static void sjdouble(){
+		long old=System.currentTimeMillis();
+		Double n=12327.00;
+		for(int i=0;i<1000000;i++){
+			n=n*80/100;
+		}
+		long now=System.currentTimeMillis();
+		System.out.println(now-old);
+	}
 }

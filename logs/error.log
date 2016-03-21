@@ -2,3 +2,20 @@
 2015-09-24  10:41:10 ERROR com.lv.log4j.LogTest 15 main - Hello, World!
 2015-09-24  10:41:10 ERROR com.lv.log4j.LogTest 16 main - Did it again!
 2015-09-24  10:41:10 FATAL com.lv.log4j.LogTest 20 main - 我是fatal信息
+2016-03-01  11:56:44 ERROR com.shannon.nio.EchoReactor 54 run - 远程主机强迫关闭了一个现有的连接。 java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:1.7.0_25]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[?:1.7.0_25]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:225) ~[?:1.7.0_25]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:198) ~[?:1.7.0_25]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:375) ~[?:1.7.0_25]
+	at com.shannon.nio.client.ClientMessageHandler.read(ClientMessageHandler.java:29) ~[bin/:?]
+	at com.shannon.nio.AbstractMessageHandler.handle(AbstractMessageHandler.java:34) ~[bin/:?]
+	at com.shannon.nio.EchoReactor.run(EchoReactor.java:52) [bin/:?]
+	at com.shannon.nio.client.EchoClient.start(EchoClient.java:61) [bin/:?]
+	at com.shannon.nio.main.ClientMain.main(ClientMain.java:22) [bin/:?]
+
+2016-03-01  11:56:44 ERROR com.shannon.nio.EchoReactor 68 run - sun.nio.ch.SocketChannelImpl cannot be cast to java.nio.channels.ServerSocketChannel java.lang.ClassCastException: sun.nio.ch.SocketChannelImpl cannot be cast to java.nio.channels.ServerSocketChannel
+	at com.shannon.nio.EchoReactor.run(EchoReactor.java:57) [bin/:?]
+	at com.shannon.nio.client.EchoClient.start(EchoClient.java:61) [bin/:?]
+	at com.shannon.nio.main.ClientMain.main(ClientMain.java:22) [bin/:?]
+

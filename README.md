@@ -43,3 +43,7 @@ com.lv.url.chat基于socket聊天的例子
 com.lv.date处理时间的工具类
 
 com.lv.zip这个是java对文件进行解压缩处理
+
+com.lv.erweima这个包下面的类使用QRCode.jar能够把路径生成二维码，还可以通过二维码进行解析出路径
+
+com.lv.couchbase测试连接couchbase和插入一条数据

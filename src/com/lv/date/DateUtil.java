@@ -4,9 +4,13 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DateUtil {
+	
+	
+	
 	/**
 	 * 获取现在时间
 	 *
@@ -225,7 +229,13 @@ public class DateUtil {
 	}
 	
 	public static void main(String[] arge){
-		System.out.println(getWeek(7));
+		//System.out.println(getWeek(7));
+		Date date=new Date();
+		int y=date.getYear();
+		System.out.println(y);
+		Calendar c = Calendar.getInstance();
+		int year = c.get(Calendar.YEAR);
+		System.out.println(year);
 	}
 
 }

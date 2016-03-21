@@ -5,3 +5,8 @@
 2015-12-03  15:01:43 INFO  com.lv.spider.ParserJSON 117 getDATA - 没有数据了！
 2015-12-04  10:27:29 INFO  com.lv.spider.ParserJSON 40 getDATAP - no data！
 2015-12-04  13:58:49 INFO  com.lv.spider.ParserJSON 40 getDATAP - no data！
+2016-03-01  11:55:52 INFO  com.shannon.nio.server.EchoServer 42 <init> - server start up
+2016-03-01  11:56:02 INFO  com.shannon.nio.client.EchoClient 52 <init> - client start up
+2016-03-01  11:56:02 INFO  com.shannon.nio.client.ClientMessageHandler 73 doWrite - Send 2 Server Success
+2016-03-01  11:56:02 INFO  com.shannon.nio.server.ServerMessageHandler 43 read - The echo server receive request :{"desc":"echo client request","value":12}
+2016-03-01  11:56:02 INFO  com.shannon.nio.client.ClientMessageHandler 36 read - the response receive from server is :{"desc":"echo server response","value":1200}
