@@ -234,8 +234,9 @@ public class DateUtil {
 		int y=date.getYear();
 		System.out.println(y);
 		Calendar c = Calendar.getInstance();
+		c.get(Calendar.MONTH);
 		int year = c.get(Calendar.YEAR);
-		System.out.println(year);
+		System.out.println(year-y);
 	}
 
 }

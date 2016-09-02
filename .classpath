@@ -16,15 +16,10 @@
 	<classpathentry kind="lib" path="lib/spring-core-4.0.4.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
 	<classpathentry kind="lib" path="lib/spring-expression-4.0.4.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/couchbase-java-client-2.2.5.jar"/>
-	<classpathentry kind="lib" path="lib/couchbase-core-io-1.2.5-javadoc.jar"/>
-	<classpathentry kind="lib" path="lib/couchbase-core-io-1.2.5-sources.jar"/>
+	<classpathentry kind="lib" path="lib/couchbase-java-client-2.2.5.jar" sourcepath="lib/couchbase-java-client-2.2.5-sources.jar"/>
 	<classpathentry kind="lib" path="lib/couchbase-core-io-1.2.5.jar"/>
-	<classpathentry kind="lib" path="lib/couchbase-java-client-2.2.5-javadoc.jar"/>
-	<classpathentry kind="lib" path="lib/couchbase-java-client-2.2.5-sources.jar"/>
-	<classpathentry kind="lib" path="lib/rxjava-1.0.15-javadoc.jar"/>
-	<classpathentry kind="lib" path="lib/rxjava-1.0.15-sources.jar"/>
 	<classpathentry kind="lib" path="lib/rxjava-1.0.15.jar"/>
 	<classpathentry kind="lib" path="lib/QRCode.jar"/>
+	<classpathentry kind="lib" path="lib/quartz-1.5.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

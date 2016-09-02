@@ -20,7 +20,7 @@ public class SpiderStart {
 	public static void main(String[] arge) throws Exception {
 		SpiderStart t = new SpiderStart();
 		//拉勾网
-		String url="http://www.lagou.com/jobs/positionAjax.json?city=长沙";
+		String url="http://www.lagou.com/jobs/positionAjax.json?city=北京";
 		//百度图片
 		String baiduRUL="http://www.wmpic.me/tupian/yijing/";
 		//时间定时任务

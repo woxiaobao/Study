@@ -4,6 +4,18 @@ import java.util.Date;
 
 public class Person {
 	
+	@Override
+	public String toString() {
+		return "{\"id\":\"" + id + "\", \"userName\":\"" + userName
+				+ "\", \"password\":\"" + password + "\", \"email\":\"" + email
+				+ "\", \"phone\":\"" + phone + "\", \"nickname\":\"" + nickname
+				+ "\", \"status\":\"" + status + "\", \"enabled\":\"" + enabled
+				+ "\", \"dateCreated\":\"" + dateCreated
+				+ "\", \"lastUpdated\":\"" + lastUpdated
+				+ "\", \"lastLoginTime\":\"" + lastLoginTime
+				+ "\", \"icon\":\"" + icon + "\"}";
+	}
+
 	private String id;
 	
 	private String userName;//用户名
